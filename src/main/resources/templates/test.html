@@ -18,6 +18,17 @@
     <div>안녕하세요 <span th:text="${name}">유신형</span>님</div>
 </div>
 
+<!-- 조건문 사용 -->
+
+<div th:with="num = 11">
+    <div th:if="${num % 2 != 0}">홀수</div>
+    <div th:unless="${num % 2 != 0}">짝수</div>
+</div>
+
+<!-- 직접 인덱스 만들어서 사용하는 반복문 사용 -->
+<div>
+<div th:each="i : ${#numbers.sequence(1,10)}" th:text="${i}"></div>
+</div>
 
 </body>
 </html>
