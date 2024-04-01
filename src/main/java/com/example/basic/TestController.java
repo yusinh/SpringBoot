@@ -155,9 +155,12 @@ public class TestController {
         list.add("banana");
         list.add("orange");
 
+        Person person = new Person("홍길동",20);
+
         model.addAttribute("myNumber", 19);
         model.addAttribute("myName", "홍길동");
         model.addAttribute("fruitsList", list);
+        model.addAttribute("person", person);
 
         return "test";
 
